@@ -62,8 +62,11 @@ Semi-supervised learning methods provided by Scikit-learn have been utilized to 
 
 * <font size = 4>Modeling</font><br>
 
+I tried multiple models including Recurrenct Neural Netowork (RNN) with Long Short Term Memory (LSTM) in Bidirectional layer, Colvolutional Network (CNN) with LSTM, and classical classifiers such as Support Vector Machine and XGBoost to compare the results and find the best model. Every single model got very smiliar scores overall, however, clearly XGBoost was performing the best due to its efficiency and its high score without overfitting.
 
-
+| XGBoost Confusion Matrix                              | XGBoost ROC-AUC Curve                           |
+| ----------------------------------------------------- | ----------------------------------------------- |
+| ![XGB_Confusion](./images/XGB_Confusion.png)          | ![XGB_AUC](./images/XGB_AUC.png)    |<br>
 
 ## Takeaway
 
@@ -122,7 +125,8 @@ Kanter MD, J., Manbeck, K. (2020, April). COVID-19 could lead to an epidemic of 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [04-Unsupervised Learning.ipynb](./code/04Unsupervised.ipynb)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [05-Semi-Supervised Learning - Label Propagation.ipynb](./code/05SemiSuper-LP.ipynb)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [05-Semi-Supervised Learning - Label Spreading.ipynb](./code/05SemiSuper-LS.ipynb)<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [06-Modeling.ipynb](./code/06Modeling.ipynb)<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [06-Modeling: Bidirectional LSTM.ipynb](./code/06BidirectionalLSTM.ipynb)<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [06-Modeling: CNN with LSTM.ipynb](./code/06CNN_LSTM.ipynb)<br>
 |__ Data (due to size, data is not included in GitHub repository)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [dataset - combined all](./data/cleaned/combined.csv)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [dataset - final version (CSV)](./data/cleaned/final.csv)<br>
@@ -159,5 +163,7 @@ Kanter MD, J., Manbeck, K. (2020, April). COVID-19 could lead to an epidemic of 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [Top 20 Words - TF-IDF, 1 gram](./images/top20_tf.png)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [Top 20 words - TF-IDF, 2 grams](./images/top20_2gram.png)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [Top 20 words - TF-IDF, 3 grams](./images/top20_3gram.png)<br>
-|__ [Presentation]<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [XGBoost - Confusion Matrix](./images/XGB_Confusion.png)<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [XGBoost - ROC-AUC Curve](./images/XGB_AUC.png)<br>
+|__ [Presentation](./COVID19_Mental_Health.pdf)<br>
 |__ [README.md](./README.md)
