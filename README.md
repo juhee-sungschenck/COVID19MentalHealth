@@ -1,5 +1,5 @@
-# Mental Health and COVID-19
-<img src = './images/assets/covid19.png' width = "800"></img>
+# Suicide Prediction
+<img src = './images/assets/suicide.jpg' width = "800"></img>
 
 
 ## Contents
@@ -13,11 +13,11 @@
 
 ## Executive Summary
 
-As COVID is impacting our everyday lives and shaping our present and future the way we did not project. We as people are struggling with keeping up with daily decisions and tasks since we are experiencing something that we did not expect to happen - loneliness, feeling of isolation, stress of not being able to be alone when needed, instability of finances, and etc. Because of this, I would like to find out what has been going on with our mental health pre/post pandemic. On top of this, suicide has risen in recent years and it was the second cause of death for age group between 1 and 44 years old in 2018 statistics published by CDC. For this, I will use natural language processing to understand the impact of COVID19 on mental health, and create a model with neural network, espeically long short term memory (LSTM) to predict suicidality from the reddit data.
+As COVID is impacting our everyday lives and shaping our present and future the way we did not project, we as people are struggling with keeping up with daily decisions and tasks since we are experiencing something that we did not expect to happen - loneliness, feeling of isolation, stress of not being able to be alone when needed, instability of finances, and etc. Because of this, I would like to find out what has been going on with our mental health pre/post pandemic. On top of this, suicide has risen in recent years and it was the second cause of death for age group between 1 and 44 years old in 2018 statistics published by CDC. For this, I will use natural language processing to understand the impact of COVID19 on mental health, and create a model with neural network, espeically long short term memory (LSTM) to predict suicidality from the reddit data.
 
 ## Problem Statement
 
-As it has been featured in media often, we as a society are suffering from increasing numbers in suicide. Suicide has been in top 5 leading causes of death in United States since 1996, and finally it was the second cause of death in 20018 in the age group of 1 and 44 years old. (see: <a href='https://www.cdc.gov/injury/wisqars/animated-leading-causes.html' target = '_blank'>CDC - Injury Prevention and Control</a>) In addition to this phenomena, we are experiencing a global pandemic that took over 1 million lives worldwide. Due to this epidemic, stay at home orders have been issued and we had to face rare situations of not being able to find toilet papers, soaps or hand sanitizers. We have been exposed to lots of panic for our physical health - then what about our mental health? We cannot go outside easily without caution; we cannot meet our friends at moment's notice; restaurants and bars are closed. According to an article published on *the conversation*, COVID-19 could lead us to clinical depression outbreak. According to <a href='https://www.hhs.gov/answers/mental-health-and-substance-abuse/does-depression-increase-risk-of-suicide/index.html' target='_blank'>U.S. Department of Health & Human Service</a>, having major depression does increase suicide risk compared to people without depression and the risk of death by suicide may, in part, be related to the severity of the depression.<br>
+Suicide has been in top 5 leading causes of death in United States since 1996, and recently it was second cause of death in 20018 in the age group of 1 and 44 years old. (see: <a href='https://www.cdc.gov/injury/wisqars/animated-leading-causes.html' target = '_blank'>CDC - Injury Prevention and Control</a>) In addition to this phenomena, we are experiencing a global pandemic that took over 1 million lives worldwide. Due to this epidemic, stay at home orders have been issued and we had to face rare situations of not being able to find toilet papers, soaps or hand sanitizers. We have been exposed to lots of panic for our physical health - then what about our mental health? We cannot go outside easily without caution; we cannot meet our friends at moment's notice; restaurants and bars are closed. According to an article published on *the conversation*, COVID-19 could lead us to clinical depression outbreak. According to <a href='https://www.hhs.gov/answers/mental-health-and-substance-abuse/does-depression-increase-risk-of-suicide/index.html' target='_blank'>U.S. Department of Health & Human Service</a>, having major depression does increase suicide risk compared to people without depression and the risk of death by suicide may, in part, be related to the severity of the depression.<br>
 Now, the question is - clinical depression could be inavoidable due to the isolation we are going through, then can we detect who's at risk of committing a suicide, especially from text data?
 
 ## Process
@@ -26,7 +26,7 @@ Now, the question is - clinical depression could be inavoidable due to the isola
 
 Data has been obtained from a research published earlier this year: <br>
 Low, Daniel M., Rumker, Laurie, Talker, Tanya, Torous, John, Cecchi, Guillermo, & Ghosh, Satrajit S. (2020). Reddit Mental Health Dataset (Version 01)<br>
-This dataset includes posts from 8 subreddits: Alcoholism, Anxiety, Bipolarreddit, Depression, Health Anxiety, Lonely, Mental Health, and Suicide Watch.
+The dataset for this project includes posts from 8 subreddits: Alcoholism, Anxiety, Bipolarreddit, Depression, Health Anxiety, Lonely, Mental Health, and Suicide Watch.
 
 * <font size = 4>Data Cleaning</font><br>
 
@@ -38,9 +38,13 @@ To find the relationship between the time and the length of posts, word count an
 
 * <font size = 4>Exploratory Data Analysis and Visualization</font><br>
 
+One thing that I particularly wanted to see was how COVID reshaped our daily lives and if there were changes in our well being. As expected, people started chatting more about COVID as we started quarantine and states issued stay at home orders in March, and any posts mentioning loneliness increased accordingly.
+
 | Covid Related Posts                                   | Loneliness Related Posts                        |
 | ----------------------------------------------------- | ----------------------------------------------- |
 | ![covid_comparison](./images/covid_comparison.png)    | ![wc_nostop](./images/lonely_comparison.png)    |<br><br>
+
+When analyzing text, the easiest way to examine the data is probably looking at the most commonly used words. I created 2 different formats of visualization — one with a word cloud and the other with TF-IDF in a bar graph. As seen below, “try”, “help”, “friend”, and “talk” were some of the common words that were said by people struggling with mental illness in word clouds, and “end”, “die”, “hate”, and “kill” made the top words selection in TF-IDF vectorization (right).
 
 | Top words from Entire dataset                         | Top words from Suicide Watch                    |
 | ----------------------------------------------------- | ----------------------------------------------- |
