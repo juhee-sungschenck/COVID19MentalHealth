@@ -34,7 +34,7 @@ Due to its cleannes of the data, I did not have to go through too much cleaning.
 
 * <font size = 4>Feature Engineering</font><br>
 
-To find the relationship between the time and the length of posts, word count and sentence count of a post were added. Also, vectors that were obtained from spaCy was stored in the dataframe as well for easy retrieval. 
+To find the relationship between the time and the length of posts, word count and sentence count of a post were added. Also, vectors that were obtained from spaCy was stored in the dataframe as well for easy retrieval.
 
 * <font size = 4>Exploratory Data Analysis and Visualization</font><br>
 
@@ -90,10 +90,10 @@ Kanter MD, J., Manbeck, K. (2020, April). COVID-19 could lead to an epidemic of 
 
 |Dataset|Column|Data Format|Data Option|Description|
 |---	|---	|---	|---	|---   |
-|Final|subreddit|string|    |Which subreddit the post belongs to| 
-|   	|author|string|    |Person who wrote the post| 
-|   	|date|datetime|January 1 to April 20, 2020|Date the post was written| 
-|   	|post|string|    |Post (raw)| 
+|Final|subreddit|string|    |Which subreddit the post belongs to|
+|   	|author|string|    |Person who wrote the post|
+|   	|date|datetime|January 1 to April 20, 2020|Date the post was written|
+|   	|post|string|    |Post (raw)|
 |       |covid_related|integer|0, 1 |Post contains COVID related words|
 |       |suicidal|integer|0, 1 |Post contains suicide related words|
 |       |alc_abuse|integer|0, 1 |Post contains alcohol related words|
@@ -106,10 +106,10 @@ Kanter MD, J., Manbeck, K. (2020, April). COVID-19 could lead to an epidemic of 
 
 |Dataset|Column|Data Format|Data Option|Description|
 |---	|---	|---	|---	|---   |
-|Labeled|subreddit|string|    |Which subreddit the post belongs to| 
-|   	|author|string|    |Person who wrote the post| 
-|   	|date|datetime|January 1 to April 20, 2020|Date the post was written| 
-|   	|post|string|    |Post (raw)| 
+|Labeled|subreddit|string|    |Which subreddit the post belongs to|
+|   	|author|string|    |Person who wrote the post|
+|   	|date|datetime|January 1 to April 20, 2020|Date the post was written|
+|   	|post|string|    |Post (raw)|
 |       |covid_related|integer|0, 1 |Post contains COVID related words|
 |       |suicidal|integer|0, 1 |Post contains suicide related words|
 |       |alc_abuse|integer|0, 1 |Post contains alcohol related words|
@@ -169,5 +169,5 @@ Kanter MD, J., Manbeck, K. (2020, April). COVID-19 could lead to an epidemic of 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [Top 20 words - TF-IDF, 3 grams](./images/top20_3gram.png)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [XGBoost - Confusion Matrix](./images/XGB_Confusion.png)<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__ [XGBoost - ROC-AUC Curve](./images/XGB_AUC.png)<br>
-|__ [Presentation](./COVID19_Mental_Health.pdf)<br>
+|__ [Presentation](./Suicide_Prediction.pdf)<br>
 |__ [README.md](./README.md)
